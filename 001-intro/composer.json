@@ -1,0 +1,8 @@
+{
+    "name": "alinka/001-intro",
+    "description": "Домашнее задание по Composer",
+    "type": "n",
+    "license": "n",
+    "minimum-stability": "dev",
+    "require": {}
+}
