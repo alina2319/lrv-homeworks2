@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,16 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', static function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['middleware' => 'auth'], static function () {
-    Route::get('/profile', [ProfileController::class, 'index']);
-});
-
-Route::group(['middleware' => 'admin'], static function () {
-    Route::get('/admin', [AdminController::class, 'index']);
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/user', [\App\Http\Controllers\ProfileController::class, 'index'])->name('user');
 });
 
 Auth::routes();

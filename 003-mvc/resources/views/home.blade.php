@@ -15,6 +15,8 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                        <p><a href="{{url('/user')}}">Learn more...</a></p>
                 </div>
             </div>
         </div>
