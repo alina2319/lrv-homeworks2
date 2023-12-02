@@ -1,66 +1,43 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Задание 1. Знакомство с документацией
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+В лекции упоминались следующие понятия про разврачивание проектов через виртуальные машины:
+* [Немного о том, что такое Vagrant](https://wiki.merionet.ru/servernye-resheniya/29/vagrant-ustanovka-i-nastrojka/)
+* [Homestead и работа с ним](https://laravel.ru/docs/v5/homestead)
 
-## About Laravel
+**Важно:** Для простоты можно использовать установку composer и Laravel руками, для этого понадобится:
+* [Установка composer](https://www.hostinger.ru/rukovodstva/kak-ustanovit-composer)
+* [Установка Laravel](https://laravel.su/docs/5.4/installation)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Дополнительная информация
+* [Хорошая статья про composer, с ссылками на оригинальную документацию](https://habr.com/ru/post/439200/)
+* [Пример работы с composer не в фреймворке, а в собственном небольшом проекте](https://nicknixer.ru/saitostroitelstvo/primenenie-i-ispolzovanie-composer-dlya-php/)
+* [Рускоязычный сайт по Laravel](https://laravel.su/)
+* [Оригинальная и более подробная документация (на английском)](https://laravel.com/docs/7.x/installation)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Если в прочтении вам встречаются незнакомые понятия, то это нестрашно - при их изучении дальше мы будем возвращаться к данным соглашениям.
+В задании не надо ничего отправлять на проверку, ознакомление с этой документацией поможет в дальнейшей работе с php.
 
-## Learning Laravel
+# Задание 2. Установка composer
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Вам необходимо установить и настроить окружение, используя один из вариантов (ссылки на два возможных варианта есть в первом задании), а также настроить composer (то есть необходимо выполнить **composer init** и настроить файл package.json соответственно реальности - имя автора, git, если есть, и другие поля).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# Задание 3. Установка Laravel
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Предыстория
 
-## Laravel Sponsors
+В предыдущем задании вы настроили окружение и установили composer, теперь время начать работать с Laravel
+и положить первый кирпичик в свое приложение :)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Техническое задание
 
-### Premium Partners
+Учимся создавать проект с нуля.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Ваши действия:
+1. Установите laravel (инструкции вы найдете в первом задании) и создайте свой проект.
+2. Настройте файл конфигурации .env:
+    * установите соответствующее название проекта в APP_NAME,
+    * установить окружение в дебагговое (позже мы изучим, как работает эта панель) в APP_DEBUG
+3. Изучите структуру созданного проекта (инстукции и описания также есть в первом задании),
+4. Запустите проект с помощью **php artisan serve**, чтобы по http://localhost:8000 отдавалась
+   дефолтная страница проекта.
