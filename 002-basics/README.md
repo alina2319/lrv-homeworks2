@@ -1,39 +1,7 @@
-# Задание 2. Создать приложение ToDo
-
-1. Настроить конфигурацию приложения для работы с **SQLite** 
-и создать файл `database\database.sqlite`
-2. С помощью **artisan** сгенерировать модель и миграцию для таблицы **todos**, каждая запись 
-в БД должна иметь следующую структуру данных:
-
-```php
-[
-    'id' => 1,
-    'title' => 'Новая задача',
-    'description' => 'Описание задачи…',
-    'created_at' => '2021-01-17 19:19:47',
-    'updated_at' => '2021-01-17 19:19:47',
-]
-```
-
-Типы данных привести в соответствие с хранимой информацией
-
-3. С помощью **artisan** сгенерировать ресурсный контроллер для 
-работы с моделью **Todo**
-4. Создать роут `GET: /todo`, по которому будет происходить вывод 
-всех записей из таблицы **todos**
-5. Создать роут `GET: /todo/{id}`, который по **id** будет находить запись 
-в в таблице **todos** и выводить информацию о ней.
-6. Создать роут `GET: /todo/create`, по которому будет происходить 
-запись новых задач в таблицу **todos**. Данные вводить вручную, 
-в функции-обработчике. После добавления делать редирект на страницу 
-вывода всех записей `GET: /todo`
-
----
-
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
@@ -56,6 +24,8 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 

@@ -1,9 +1,5 @@
 <?php
 
-use App\Http\Controllers\TodoController;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', static fn() => view('welcome'));
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/todo', [TodoController::class, 'index']);
 Route::get('/todo/create', [TodoController::class, 'create']);
-Route::post('/todo/submit', [TodoController::class, 'store']);
 Route::get('/todo/{id}', [TodoController::class, 'show']);
-Route::get('/todo', [TodoController::class, 'index'])->name('todo.index');

@@ -3,76 +3,79 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todo;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Validation\ValidationException;
 
 class TodoController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Application|Factory|View|Response
+     * @return \Illuminate\Http\Response
      */
-    public function index(): View|Factory|Response|Application
+    public function index()
     {
-        $todos = Todo::all();
+        $allTodos = Todo::all();
 
-        return view('todo.index', ['todos'=>$todos]);
+        dd($allTodos);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return Application|Factory|View
+     * @return \Illuminate\Http\Response
      */
-    public function create(): Application|Factory|View
+    public function create()
     {
-        return view('todo.create');
+        $fakeTasks = [
+            [
+                'title' => 'Сходить в магазин',
+                'description' => 'Купить хлеб',
+                'done' => true
+            ],
+            [
+                'title' => 'Сходить в кино',
+                'description' => 'Посмотреть фильм',
+                'done' => false
+            ]
+        ];
+
+        foreach($fakeTasks as $task) {
+            Todo::create($task);
+        }
+
+        return redirect('todo');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
-     * @return RedirectResponse
-     * @throws ValidationException
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
-        $this->validate($request, Todo::$rules);
-        $todo = new Todo;
-        $form = $request->all();
-        unset($form['_token']);
-        $todo->fill($form)->save();
-
-        return redirect()->route('todo.index');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int $id
-     * @return View
+     * @param  \App\Models\Todo  $todo
+     * @return \Illuminate\Http\Response
      */
-    public function show(int $id): View
+    public function show(Todo $todo, $id)
     {
-        $todo = Todo::find($id);
-
-        return View('todo.show', ['todo' => $todo]);
+        $task = Todo::find($id);
+        dd($task);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  Todo  $todo
-     * @return Response
+     * @param  \App\Models\Todo  $todo
+     * @return \Illuminate\Http\Response
      */
-    public function edit(Todo $todo): Response
+    public function edit(Todo $todo)
     {
         //
     }
@@ -80,11 +83,11 @@ class TodoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  Todo  $todo
-     * @return Response
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Todo  $todo
+     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Todo $todo): Response
+    public function update(Request $request, Todo $todo)
     {
         //
     }
@@ -92,10 +95,10 @@ class TodoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Todo  $todo
-     * @return Response
+     * @param  \App\Models\Todo  $todo
+     * @return \Illuminate\Http\Response
      */
-    public function destroy(Todo $todo): Response
+    public function destroy(Todo $todo)
     {
         //
     }

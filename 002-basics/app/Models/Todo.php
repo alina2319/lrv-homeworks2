@@ -8,14 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Todo extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'title',
-        'description'
-    ];
-
-    public static array $rules = array(
-        'title'=> 'required',
-        'description'=> 'required',
-    );
+    protected $table = 'todos';
+    protected $guarded = [];
 }
