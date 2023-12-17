@@ -16,10 +16,11 @@
     width: 120px;
 }
 
-.card-body {
+.card-body, .card-created, .card-updated {
     width: 200px;
 }
 
-.card-created, .card-updated {
-    width: 230px;
+.token {
+    width: 800px;
+    overflow-wrap: break-word;
 }

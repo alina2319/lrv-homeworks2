@@ -22,5 +22,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/info', [\App\Http\Controllers\InfoUserController::class, 'index'])->name('InfoUser.index');
+    Route::get('/api/user', [\App\Http\Controllers\InfoUserController::class, 'index'])->name('InfoUser.index');
+    Route::apiResource('/cars', \App\Http\Controllers\CarsController::class);
+    Route::get('/api/tokens/create', [\App\Http\Controllers\ApiTokenController::class, 'index'])->name('token');
 });

@@ -17,7 +17,8 @@
                     {{ __('You are logged in!') }}
                 </div>
             </div>
-            <a href="/info">Посмотреть info</a>
+            <div><a href="/api/user">Посмотреть info</a></div>
+            <div><a href="/api/tokens/create">Посмотреть токен</a></div>
         </div>
     </div>
 </div>
