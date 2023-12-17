@@ -3,32 +3,23 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
 
 class CheckIsAdmin
 {
     /**
      * Handle an incoming request.
      *
-     * @param Request $request
-     * @param Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
-     * @return Response|RedirectResponse
+     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response|RedirectResponse
+    public function handle(Request $request, Closure $next): Response
     {
         $user = Auth::user();
-
-        if (is_null($user)) {
-            return redirect()->route('home');
-        }
-
-        if (! $user->is_admin) {
+        if (!$user->is_admin) {
             return abort(403);
         }
-
         return $next($request);
     }
 }
