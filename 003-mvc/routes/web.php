@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/info', [\App\Http\Controllers\InfoUserController::class, 'index'])->name('InfoUser.index');
-});
+Route::get('/todo', [\App\Http\Controllers\TodoController::class, 'index'])->name('todo.index');
+Route::get('/todo/{id}', [\App\Http\Controllers\TodoController::class, 'show'])->where('id', '[0-9]+')->name('todo.show');
+Route::get('/todo/create', [\App\Http\Controllers\TodoController::class, 'create'])->name('todo.create');
