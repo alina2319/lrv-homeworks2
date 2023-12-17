@@ -1,0 +1,25 @@
+.card {
+    display: flex;
+}
+
+.card-id, .card-header, .card-body, .card-created, .card-updated {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.card-id {
+    width: 40px;
+
+}
+
+.card-header {
+    width: 120px;
+}
+
+.card-body {
+    width: 200px;
+}
+
+.card-created, .card-updated {
+    width: 230px;
+}
